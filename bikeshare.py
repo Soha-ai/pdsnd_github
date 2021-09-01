@@ -219,7 +219,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         if restart.lower() != 'yes':
             print("this is some row of file you display data from")
             show = 'y'
@@ -228,7 +228,7 @@ def main():
                 print(df.iloc[i:i+5,:])
                 i+=5
                 print("Do you want to show more?")
-                show= input("type 'y' for Yes or 'n' for No: ")
+                show= input("type 'y' for Yes or 'n' for No: ").lower()
                 if show != 'y':
                     exit()
 
