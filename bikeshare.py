@@ -17,24 +17,24 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city= input("Which city you want to show it's data (chicago, new york city or washington): ")
+    city= input("Which city you want to show it's data (chicago, new york city or washington): ").lower()
     while city not in CITY_DATA:
         print("Sorry, you wtite a non exist chocie could you pleasr reinsert a right one")
-        city= input("Which city you want to show it's data (chicago, new york city or washington): ")
+        city= input("Which city you want to show it's data (chicago, new york city or washington): ").lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = 'all'
     months=['january', 'february', 'march', 'april', 'may', 'june']
     print("Do you want to show data of 'all month' or data for 'specifc month' from {}? ".format(months))
-    m= input("write 'all' for all month or 'sm' for specifc month ")
+    m= input("write 'all' for all month or 'sm' for specifc month ").lower()
     while m != 'all' and m!='sm':
         print("Sorry, you wtite a non exist chocie could you pleasr reinsert a right one")
-        m= input("write 'all' for all month or 'sm' for specifc month ")
+        m= input("write 'all' for all month or 'sm' for specifc month ").lower()
     if m == 'sm':
         month = input("write month from list {} ".format(months))
         while month not in months:
             print("Sorry, you wtite a non exist chocie could you pleasr reinsert a right one")
-            month = input("write month from list {} ".format(months))
+            month = input("write month from list {} ".format(months)).lower()
     elif m == 'all':
         month = 'all'
 
@@ -44,16 +44,16 @@ def get_filters():
     day = 'all'
     days=['monday','tuesday','wednesday','thursday','friday','saturday']
     print("Do you want to show data of 'all week' or data for 'one day of week' from {}? ".format(days))
-    d= input("write 'all' for all week or 'sd' for specifc day ")
+    d= input("write 'all' for all week or 'sd' for specifc day ").lower()
     while d != 'all' and d!='sd':
         print("Sorry, you wtite a non exist chocie could you pleasr reinsert a right one")
-        d= input("write 'all' for all week or 'sd' for specifc day ")
+        d= input("write 'all' for all week or 'sd' for specifc day ").lower()
 
     if d == 'sd':
-        day = input("write day from list {} ".format(days))
+        day = input("write day from list {} ".format(days)).lower()
         while day not in days:
             print("Sorry, you wtite a non exist chocie could you pleasr reinsert a right one")
-            day = input("write day from list {} ".format(days))
+            day = input("write day from list {} ".format(days)).lower()
     else:
         day = 'all'
 
