@@ -15,6 +15,7 @@ using:
 ### Files used
 bikeshare.py
 CVS Files (chicago.cvs, new_york_city.cvs, washington.cvs)
+*(CVS Files was ignoring in git.)
 
 ### Credits
 https://classroom.udacity.com/nanodegrees/nd104-connect/parts/1b6e396a-0eef-4360-9bb5-e78903d9ddb4
